@@ -1,0 +1,136 @@
+/*":root" É A RAIZ DO DOCUMENTO | "--vermelho e --preta" ESTÁ DECLARANDO VARÁVEL */
+:root{
+    /*CORES PRINCIPAIS DO SITE*/
+    --vermelho: #E50914;
+    --preta: #141414;
+}
+
+/* " *{...}"RESERT CSS - REFERE-SE A TODO DOCUMENTO CONTIDO NO PROJETO*/
+*{
+    margin: 0; /*MARGEM PADRÃO DO DOCUMENTO ESTÁ EM ZERO*/
+    padding: 0; /*ESPAÇAMENTO PADRÃO DO DOCUMENTO ESTÁ EM ZERO*/
+    box-sizing: border-box; /*FAZ COM QUE CONTEÚDO TENHA O TAMANHO EXATO QUE EU QUEIRA*/
+}
+/*"body" MUDARÁ TODOS OS ELEMENTOS QUE ESTÃO CONTIDOS NELE"*/
+
+
+
+
+
+
+
+
+/*ELEMENTOS BASE*/
+
+body{
+    background: var(--preta); /*MUDA A COR DE FUNDO COMPLETA*/
+    font-family: 'Arial', Times, serif; /*EM TODO O CORPO DO CÓDIGO A FONTE SERÁ "Times". As consecutivas é em caso da anterior não funcionar */
+    color: white;
+}
+
+
+/*"header .container" MUDARÁ TODOS OS ELEMENTOS QUE ESTÃO CONTIDOS EM " header .container"*/
+header .container{
+    display: flex; /*ALINHA OS ELEMENTOS EM TELA*/
+    flex-direction: row; /*JOGA TUDO PARA LINHA*/
+    align-items: center; /*ALINHA ELEMENTOS AO CENTRO E VERTICALMENTE*/
+     justify-content: space-between; /*FAZ COM QUE TENHA ESPAÇO ENTRE h2(NETFLIX) e nav(a href) HORIZONTALMENTE*/
+
+    
+}
+/*"header .logo" MUDARÁ TODOS OS ELEMENTOS QUE ESTÃO CONTIDOS EM LOGOTIPO (.logo)*/
+header .logo{
+    margin-left: 5px; /*DA UM ESPAÇAMENTO ENTRE A BORDA E O LOGOTIPO*/
+    color: var(--vermelho); /*CHAMA UM COMANDO DE COR ANTERIORMENTE DECLARADO*/
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+}
+/*"header nav a" MUDARÁ TODOS OS ELEMENTOS QUE ESTÃO CONTIDOS EM " header nav a"*/
+header nav a{
+    text-decoration: none; /*TIRA SUBLINHADO DE LINKS "a href"*/
+    color: #AAA; 
+    margin-right: 10px; /*AUMENTA ESPACAMENTO ENTRE OS LINKS "a href" */
+
+}
+
+/*a:hover FAZ COM QUE A COR DAS TAGS "a" MUDEM AO PASSAR O MOUSE POR CIMA*/
+header nav a:hover{
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+/*FILME PRINCIPAL*/
+.filme-principal{
+    font-size: 16px; /*MUDA FONTES PARA PESO IDEAL(TAMANHO) */
+    /*criar variação gradativa de cores*/
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%),  url("https://www.themoviedb.org/t/p/original/5BMwFwNzSidVYArn561acqtktxv.jpg"); /*REFERENCIA UMA IMAGEM*/
+
+    height: 400px; /*AUMENTA RESOLUÇÃO DA IMAGEM EM QUESTÃO DE ALTURA*/
+    background-size: cover ; /*FAZ COM QUE IMAGEM ENTRE NA ÁREA DE COBERTURA(cover) DA CAIXA*/
+
+    display: flex ; /*...*/
+    /*OBSERVAÇÃO: NOSSO JUSTIFY-CONTENT E ALGIN-ITEMS TÊM QUE ESTAR DE ACORDO COM O FLEX DIRECTION;*/
+    flex-direction: column; /*JOGA TUDO PARA COLUNA*/
+    justify-content: center; /*FAZ COM QUE DOCUMENTO SE CENTRALIZE NA COLUNA*/
+    align-items: flex-start; /*FAZ COM QUE ELEMENTOS COMECEM SEMPRE DA ESQUERDA*/
+
+
+} 
+
+.filme-principal .descricao{
+    margin-top: 10px ; /*CRIA UMA MARGEM ACIMA DA DESCRIÇÃO, CRIANDO ESPAÇO ENTRE DESCRIÇÃO E TÍTULO*/
+    margin-bottom: 30px; /*CRIA UMA MARGEM ABAIXO DA DESCRIÇÃO, CRIANDO ESPAÇO ENTRE DESCRIÇÃO E BOTÃO*/
+
+}
+
+.titulo{
+    margin-top: 10%;
+    font-size: 40px; /*...*/
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+
+.botao{
+    background-color: rgba(0,0,0,.50); /*COR DA CAIXA DOS BOTOES*/
+    border: none; /*SEM BORDA NA CAIXA*/
+    color: white; /*COR DA LETRA BRANCA*/
+
+    padding: 15px 30px;/*ESPAÇAMENTO DA CAIXA COM A INFORMAÇÃO DENTRO DELA(15px CIMA, 30px BAIXO)*/
+    margin-right: 15px ; /*ESPAÇAMENTO MAIOR ENTRE BOTÕES*/
+    font-size: 12px;
+
+    cursor: pointer; /*COLOCA CURSOR COMO PONTEIRO (MÃOZINHA DE CLICK)*/
+    transition: .3s ease all; /*ALTERA TRANSIÇÃO ENTRE UMA COISA E OUTRA*/
+}
+
+.botao:hover{
+    background-color: white; /*DEIXA BOTÃO BRANCO AO PASSAR O MOUSE EM CIMA*/
+    color: black;
+}
+
+.botao i{
+    margin-right: 5px; /*SEPARA ÍCONES DO TEXTO*/
+}
+
+.container{
+    margin-left: 20px ; /*SEPARA À ESQUERDA TODO DOCUMENTO DO CONTAINER */
+}
+
+.filme-principal .container{
+    width: 60%; /*LIMITAÇÃO DE LARGURA*/
+}
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-filmes{
+    margin-top: 10px;
+}
